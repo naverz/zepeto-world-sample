@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 4028d5856606b4b899aa92ef80c3f0ed
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass Movement extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.movingTime
+    = 1;\r\n        this.movingRangeX = 0;\r\n        this.movingRangeY = 2;\r\n       
+    this.delta = 0;\r\n        this.directionFlag = true;\r\n    }\r\n    Update()
+    {\r\n        this.delta += UnityEngine_1.Time.deltaTime;\r\n        if (this.delta
+    > this.movingTime) {\r\n            this.delta = 0;\r\n            this.directionFlag
+    = !this.directionFlag;\r\n        }\r\n        if (this.directionFlag) {\r\n           
+    //Move upward during the set moving time\r\n            this.transform.Translate(this.movingRangeX
+    * UnityEngine_1.Time.deltaTime, this.movingRangeY * UnityEngine_1.Time.deltaTime,
+    0);\r\n        }\r\n        else {\r\n            //Move downward during the
+    set moving time\r\n            this.transform.Translate(-1 * this.movingRangeX
+    * UnityEngine_1.Time.deltaTime, -1 * this.movingRangeY * UnityEngine_1.Time.deltaTime,
+    0);\r\n        }\r\n    }\r\n}\r\nexports.default = Movement;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92ZW1lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNb3ZlbWVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFzRDtBQUN0RCw2Q0FBZ0U7QUFFaEUsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUEzRDs7UUFFVyxlQUFVLEdBQVcsQ0FBQyxDQUFDO1FBQ3ZCLGlCQUFZLEdBQVcsQ0FBQyxDQUFDO1FBQ3pCLGlCQUFZLEdBQVcsQ0FBQyxDQUFDO1FBQ3hCLFVBQUssR0FBWSxDQUFDLENBQUM7UUFDbkIsa0JBQWEsR0FBUyxJQUFJLENBQUM7SUFzQnZDLENBQUM7SUFwQkcsTUFBTTtRQUVGLElBQUksQ0FBQyxLQUFLLElBQUksa0JBQUksQ0FBQyxTQUFTLENBQUM7UUFDN0IsSUFBRyxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxVQUFVLEVBQy9CO1lBQ0ksSUFBSSxDQUFDLEtBQUssR0FBRyxDQUFDLENBQUM7WUFDZixJQUFJLENBQUMsYUFBYSxHQUFHLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQztTQUM1QztRQUVELElBQUksSUFBSSxDQUFDLGFBQWEsRUFDdEI7WUFDSSx3Q0FBd0M7WUFDeEMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFlBQVksR0FBRyxrQkFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLENBQUMsWUFBWSxHQUFHLGtCQUFJLENBQUMsU0FBUyxFQUFFLENBQUMsQ0FBQyxDQUFDO1NBQ3ZHO2FBRUQ7WUFDSSwwQ0FBMEM7WUFDMUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLFlBQVksR0FBRyxrQkFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsWUFBWSxHQUFHLGtCQUFJLENBQUMsU0FBUyxFQUFFLENBQUMsQ0FBQyxDQUFDO1NBQ2pIO0lBQ0wsQ0FBQztDQUNKO0FBNUJELDJCQTRCQyJ9","assetPath":"Assets/Chapter1/Scripts/Movement.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"movingTime","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"movingRangeX","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"movingRangeY","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Movement","description":""},"isCompiled":true}'
+  typescriptHash: 069e99363ef2b6e851d1b969f4d4e818

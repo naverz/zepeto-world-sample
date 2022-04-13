@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 59bd372da69554010bc0739f3da05400
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    UIController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.maxCount = 7;\r\n    }\r\n   
+    Start() {\r\n        //Init value\r\n        this.message = \"Items\";\r\n       
+    this.count = 0;\r\n    }\r\n    IncreaseCount() {\r\n        this.count++;\r\n       
+    if (this.count >= this.maxCount) {\r\n            this.resultUI.text = \"Clear!\";\r\n       
+    }\r\n        else {\r\n            this.stringProperty = `${this.message} : ${this.count}`;\r\n           
+    this.resultUI.text = this.stringProperty;\r\n        }\r\n    }\r\n}\r\nexports.default
+    = UIController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXNEO0FBSXRELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFBL0Q7O1FBR1csYUFBUSxHQUFXLENBQUMsQ0FBQztJQTRCaEMsQ0FBQztJQXRCRyxLQUFLO1FBRUQsWUFBWTtRQUNaLElBQUksQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO1FBQ3ZCLElBQUksQ0FBQyxLQUFLLEdBQUcsQ0FBQyxDQUFDO0lBQ25CLENBQUM7SUFFTSxhQUFhO1FBRWhCLElBQUksQ0FBQyxLQUFLLEVBQUUsQ0FBQztRQUViLElBQUcsSUFBSSxDQUFDLEtBQUssSUFBSSxJQUFJLENBQUMsUUFBUSxFQUM5QjtZQUNJLElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxHQUFHLFFBQVEsQ0FBQztTQUNqQzthQUVEO1lBQ0ksSUFBSSxDQUFDLGNBQWMsR0FBRyxHQUFHLElBQUksQ0FBQyxPQUFPLE1BQU0sSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDO1lBQ3hELElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUM7U0FDNUM7SUFDTCxDQUFDO0NBRUo7QUEvQkQsK0JBK0JDIn0=","assetPath":"Assets/Chapter2/Scripts/UIController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"resultUI","type":"UnityEngine.UI.Text","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxCount","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIController","description":""},"isCompiled":true}'
+  typescriptHash: 20357e74a65af5b7969a37757ef34969

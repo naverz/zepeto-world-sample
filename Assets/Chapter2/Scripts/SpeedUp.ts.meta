@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 606c2a66c34ca47a39b82bf7a8df73ed
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SpeedUp extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.runSpeed
+    = 4;\r\n        this.waitTime = 3;\r\n    }\r\n    Start() {\r\n        //Zepeto
+    character object\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if (this.zepetoCharacter
+    == null || collider.gameObject != this.zepetoCharacter.gameObject)\r\n           
+    return;\r\n        this.zepetoCharacter.additionalRunSpeed = this.runSpeed;\r\n       
+    this.StartCoroutine(this.DoRoutine());\r\n    }\r\n    *DoRoutine() {\r\n       
+    //Wait for waitTime value\r\n        yield new UnityEngine_1.WaitForSeconds(this.waitTime);\r\n       
+    //Turn the run speed back to normal\r\n        this.zepetoCharacter.additionalRunSpeed
+    = 0;\r\n    }\r\n}\r\nexports.default = SpeedUp;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BlZWRVcC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwZWVkVXAudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBbUU7QUFDbkUsNkVBQTZFO0FBQzdFLGlEQUFzRDtBQUV0RCxNQUFxQixPQUFRLFNBQVEscUNBQXFCO0lBQTFEOztRQUdXLGFBQVEsR0FBVyxDQUFDLENBQUM7UUFDckIsYUFBUSxHQUFXLENBQUMsQ0FBQztJQXlCaEMsQ0FBQztJQXZCRyxLQUFLO1FBRUQseUJBQXlCO1FBQ3pCLDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLGVBQWUsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUNyRixDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCxjQUFjLENBQUMsUUFBa0I7UUFFN0IsSUFBSSxJQUFJLENBQUMsZUFBZSxJQUFJLElBQUksSUFBSSxRQUFRLENBQUMsVUFBVSxJQUFJLElBQUksQ0FBQyxlQUFlLENBQUMsVUFBVTtZQUN0RixPQUFPO1FBQ1gsSUFBSSxDQUFDLGVBQWUsQ0FBQyxrQkFBa0IsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDO1FBQ3hELElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFNBQVMsRUFBRSxDQUFDLENBQUM7SUFDMUMsQ0FBQztJQUVELENBQUMsU0FBUztRQUVOLHlCQUF5QjtRQUN6QixNQUFNLElBQUksNEJBQWMsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDeEMsbUNBQW1DO1FBQ25DLElBQUksQ0FBQyxlQUFlLENBQUMsa0JBQWtCLEdBQUcsQ0FBQyxDQUFDO0lBQ2hELENBQUM7Q0FDSjtBQTdCRCwwQkE2QkMifQ==","assetPath":"Assets/Chapter2/Scripts/SpeedUp.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"runSpeed","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"waitTime","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpeedUp","description":""},"isCompiled":true}'
+  typescriptHash: 9c778a5b914065f0f2b900f9399a7f45

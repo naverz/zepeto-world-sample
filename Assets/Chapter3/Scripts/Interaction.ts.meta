@@ -1,0 +1,54 @@
+fileFormatVersion: 2
+guid: 3fbf6a7836eba40eea4e15ec15ea3111
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\n// import custom script from
+    path\r\nconst UIController_1 = require(\"./UIController\");\r\nclass Interaction
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this.failureRatio = 50;\r\n    }\r\n    Start()
+    {\r\n        // Set EventCamera \r\n        this.interactionCanvas.worldCamera
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    // Set character\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n        // Script import\r\n        this.uiController = this.uiControllerObject.GetComponent($typeof(UIController_1.default));\r\n       
+    //Button Hide\r\n        this.openUIGesture.gameObject.SetActive(false);\r\n       
+    //When Button Click\r\n        this.openUIGesture.onClick.AddListener(() => {\r\n           
+    this.zepetoCharacter.SetGesture(this.animationClip);\r\n            this.StartCoroutine(this.FirstRoutine());\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        this.openUIGesture.gameObject.SetActive(true);\r\n   
+    }\r\n    OnTriggerExit(collider) {\r\n        this.openUIGesture.gameObject.SetActive(false);\r\n   
+    }\r\n    *FirstRoutine() {\r\n        this.uiController.Loading();\r\n       
+    yield new UnityEngine_1.WaitForSeconds(3);\r\n        this.zepetoCharacter.CancelGesture();\r\n       
+    this.RandomCalculation();\r\n    }\r\n    RandomCalculation() {\r\n        let
+    randomNumber;\r\n        randomNumber = UnityEngine_1.Random.Range(0, 100);\r\n       
+    if (randomNumber <= this.failureRatio) {\r\n            this.Lose();\r\n       
+    }\r\n        else {\r\n            this.Win();\r\n        }\r\n        this.StartCoroutine(this.SecondRoutine());\r\n   
+    }\r\n    Lose() {\r\n        this.uiController.Lose();\r\n        //GameObject
+    Create\r\n        var obj = UnityEngine_1.Object.Instantiate(this.badEffectFactory);\r\n       
+    obj.transform.position = this.transform.position;\r\n    }\r\n    Win() {\r\n       
+    this.uiController.Win();\r\n        //GameObject Create\r\n        var obj =
+    UnityEngine_1.Object.Instantiate(this.goodEffectFactory);\r\n        obj.transform.position
+    = this.transform.position;\r\n        var giftobj = UnityEngine_1.Object.Instantiate(this.gift);\r\n       
+    giftobj.transform.position = this.transform.position;\r\n    }\r\n    *SecondRoutine()
+    {\r\n        yield new UnityEngine_1.WaitForSeconds(1);\r\n        this.uiController.Init();\r\n       
+    //Destroy box\r\n        UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n   
+    }\r\n}\r\nexports.default = Interaction;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW50ZXJhY3Rpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJJbnRlcmFjdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFnRztBQUVoRyw2RUFBNkU7QUFDN0UsaURBQXNEO0FBRXRELGlDQUFpQztBQUNqQyxpREFBMEM7QUFFMUMsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUE5RDs7UUFTVyxpQkFBWSxHQUFXLEVBQUUsQ0FBQztJQW1GckMsQ0FBQztJQTlFRyxLQUFLO1FBRUQsbUJBQW1CO1FBQ25CLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxXQUFXLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQztRQUNoRixnQkFBZ0I7UUFDaEIsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN2RCxJQUFJLENBQUMsZUFBZSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1FBQ3JGLENBQUMsQ0FBQyxDQUFDO1FBQ0gsZ0JBQWdCO1FBQ2hCLElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLGtCQUFrQixDQUFDLFlBQVksU0FBQyxzQkFBWSxFQUFHLENBQUM7UUFFekUsYUFBYTtRQUNiLElBQUksQ0FBQyxhQUFhLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUUvQyxtQkFBbUI7UUFDbkIsSUFBSSxDQUFDLGFBQWEsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTtZQUN2QyxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUM7WUFDcEQsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUMsQ0FBQztRQUM3QyxDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCxjQUFjLENBQUMsUUFBUTtRQUVuQixJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDbEQsQ0FBQztJQUNELGFBQWEsQ0FBQyxRQUFRO1FBRWxCLElBQUksQ0FBQyxhQUFhLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNuRCxDQUFDO0lBRUQsQ0FBQyxZQUFZO1FBRVQsSUFBSSxDQUFDLFlBQVksQ0FBQyxPQUFPLEVBQUUsQ0FBQztRQUM1QixNQUFNLElBQUksNEJBQWMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUM1QixJQUFJLENBQUMsZUFBZSxDQUFDLGFBQWEsRUFBRSxDQUFDO1FBQ3JDLElBQUksQ0FBQyxpQkFBaUIsRUFBRSxDQUFDO0lBQzdCLENBQUM7SUFFTyxpQkFBaUI7UUFFckIsSUFBSSxZQUFvQixDQUFDO1FBQ3pCLFlBQVksR0FBRyxvQkFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDLEVBQUMsR0FBRyxDQUFDLENBQUM7UUFDbkMsSUFBSSxZQUFZLElBQUksSUFBSSxDQUFDLFlBQVksRUFDckM7WUFDSSxJQUFJLENBQUMsSUFBSSxFQUFFLENBQUM7U0FDZjthQUVEO1lBQ0ksSUFBSSxDQUFDLEdBQUcsRUFBRSxDQUFDO1NBQ2Q7UUFDRCxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxDQUFDO0lBQzlDLENBQUM7SUFFTyxJQUFJO1FBRVIsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEVBQUUsQ0FBQztRQUN6QixtQkFBbUI7UUFDbkIsSUFBSSxHQUFHLEdBQUcsb0JBQU0sQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLGdCQUFnQixDQUFlLENBQUM7UUFDbEUsR0FBRyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7SUFDckQsQ0FBQztJQUVPLEdBQUc7UUFFUCxJQUFJLENBQUMsWUFBWSxDQUFDLEdBQUcsRUFBRSxDQUFDO1FBQ3hCLG1CQUFtQjtRQUNuQixJQUFJLEdBQUcsR0FBRyxvQkFBTSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsaUJBQWlCLENBQWUsQ0FBQztRQUNuRSxHQUFHLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQztRQUNqRCxJQUFJLE9BQU8sR0FBRyxvQkFBTSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFlLENBQUM7UUFDMUQsT0FBTyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7SUFDekQsQ0FBQztJQUVELENBQUMsYUFBYTtRQUVWLE1BQU0sSUFBSSw0QkFBYyxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQzVCLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxFQUFFLENBQUM7UUFDekIsYUFBYTtRQUNiLHdCQUFVLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQztJQUN4QyxDQUFDO0NBQ0o7QUE1RkQsOEJBNEZDIn0=","assetPath":"Assets/Chapter3/Scripts/Interaction.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"openUIGesture","type":"UnityEngine.UI.Button","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UIModule","name":"interactionCanvas","type":"UnityEngine.Canvas","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.AnimationModule","name":"animationClip","type":"UnityEngine.AnimationClip","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"uiControllerObject","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"badEffectFactory","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"goodEffectFactory","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"gift","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"failureRatio","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Interaction","description":""},"isCompiled":true}'
+  typescriptHash: 67427bd7a8875e5e1bcf77ffbc7e9914

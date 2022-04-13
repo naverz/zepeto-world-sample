@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 0ded816e59002491e9c9d2d2cac02347
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\n//define
+    variable to use\r\nclass UIController extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.Init();\r\n    }\r\n    Init() {\r\n       
+    this.messageUI.text = \" \";\r\n    }\r\n    Loading() {\r\n        this.messageUI.text
+    = \"What is in the box?\";\r\n    }\r\n    Win() {\r\n        this.messageUI.text
+    = \"Congrats! You got it\";\r\n    }\r\n    Lose() {\r\n        this.messageUI.text
+    = \"It''s a blank\";\r\n    }\r\n}\r\nexports.default = UIController;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXNEO0FBSXRELHdCQUF3QjtBQUN4QixNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBSTNELEtBQUs7UUFFRCxJQUFJLENBQUMsSUFBSSxFQUFFLENBQUM7SUFDaEIsQ0FBQztJQUVNLElBQUk7UUFFUCxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBRyxHQUFHLENBQUM7SUFDOUIsQ0FBQztJQUVNLE9BQU87UUFFVixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBRyxxQkFBcUIsQ0FBQztJQUNoRCxDQUFDO0lBRU0sR0FBRztRQUVOLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLHNCQUFzQixDQUFDO0lBQ2pELENBQUM7SUFFTSxJQUFJO1FBRVAsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEdBQUcsY0FBYyxDQUFDO0lBQ3pDLENBQUM7Q0FFSjtBQTdCRCwrQkE2QkMifQ==","assetPath":"Assets/Chapter3/Scripts/UIController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"messageUI","type":"UnityEngine.UI.Text","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIController","description":""},"isCompiled":true}'
+  typescriptHash: 156da3ddc26ae454c660cec362aef177

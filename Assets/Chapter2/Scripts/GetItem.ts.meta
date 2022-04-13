@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: d818417a75bb748bc8fe1c49487d40fe
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\n// import custom script from
+    path\r\nconst UIController_1 = require(\"./UIController\");\r\nclass GetItem
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        //Zepeto
+    character object\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n        //script import\r\n        this.extComponent = this.extComponentGameObject.GetComponent($typeof(UIController_1.default));\r\n   
+    }\r\n    OnTriggerEnter(collider) {\r\n        if (this.zepetoCharacter == null
+    || collider.gameObject != this.zepetoCharacter.gameObject)\r\n            return;\r\n       
+    //Sends a message of raising a count after eating an item\r\n        this.extComponent.IncreaseCount();\r\n       
+    //Destroy item\r\n        UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n   
+    }\r\n}\r\nexports.default = GetItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2V0SXRlbS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdldEl0ZW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBdUU7QUFDdkUsNkVBQTJGO0FBQzNGLGlEQUE0RTtBQUU1RSxpQ0FBaUM7QUFDakMsaURBQTBDO0FBRTFDLE1BQXFCLE9BQVEsU0FBUSxxQ0FBcUI7SUFNdEQsS0FBSztRQUVELHlCQUF5QjtRQUN6QiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxlQUFlLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUM7UUFDckYsQ0FBQyxDQUFDLENBQUM7UUFDSCxlQUFlO1FBQ2YsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLENBQUMsc0JBQXNCLENBQUMsWUFBWSxTQUFDLHNCQUFZLEVBQUcsQ0FBQztJQUNqRixDQUFDO0lBR0QsY0FBYyxDQUFDLFFBQWtCO1FBRTdCLElBQUksSUFBSSxDQUFDLGVBQWUsSUFBSSxJQUFJLElBQUksUUFBUSxDQUFDLFVBQVUsSUFBSSxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVU7WUFDdEYsT0FBTztRQUVYLHlEQUF5RDtRQUN6RCxJQUFJLENBQUMsWUFBWSxDQUFDLGFBQWEsRUFBRSxDQUFDO1FBQ2xDLGNBQWM7UUFDZCx3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7SUFDekMsQ0FBQztDQUNIO0FBM0JELDBCQTJCQyJ9","assetPath":"Assets/Chapter2/Scripts/GetItem.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"extComponentGameObject","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GetItem","description":""},"isCompiled":true}'
+  typescriptHash: 45fa5e2881fdf77fc2af8c48b22ffe6e

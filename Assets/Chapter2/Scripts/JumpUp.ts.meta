@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 7e6ef331ef1ac49c1b72c812ea63e516
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass JumpPower extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.jumpPower
+    = 5;\r\n    }\r\n    Start() {\r\n        //Zepeto character object\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if (this.zepetoCharacter
+    == null || collider.gameObject != this.zepetoCharacter.gameObject)\r\n           
+    return;\r\n        //Add Jumppower\r\n        this.zepetoCharacter.additionalJumpPower
+    = this.jumpPower;\r\n    }\r\n    OnTriggerExit(collider) {\r\n        //Turn
+    the jump power back to normal\r\n        this.zepetoCharacter.additionalJumpPower
+    = 0;\r\n    }\r\n}\r\nexports.default = JumpPower;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSnVtcFVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiSnVtcFVwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsNkVBQTZFO0FBQzdFLGlEQUFzRDtBQUV0RCxNQUFxQixTQUFVLFNBQVEscUNBQXFCO0lBQTVEOztRQUVXLGNBQVMsR0FBVyxDQUFDLENBQUM7SUF3QmpDLENBQUM7SUFyQkcsS0FBSztRQUVELHlCQUF5QjtRQUN6QiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxlQUFlLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUM7UUFDckYsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsY0FBYyxDQUFDLFFBQWtCO1FBRTdCLElBQUksSUFBSSxDQUFDLGVBQWUsSUFBSSxJQUFJLElBQUksUUFBUSxDQUFDLFVBQVUsSUFBSSxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVU7WUFDdEYsT0FBTztRQUVYLGVBQWU7UUFDZixJQUFJLENBQUMsZUFBZSxDQUFDLG1CQUFtQixHQUFHLElBQUksQ0FBQyxTQUFTLENBQUM7SUFDOUQsQ0FBQztJQUVELGFBQWEsQ0FBQyxRQUFrQjtRQUM1QixvQ0FBb0M7UUFDcEMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxtQkFBbUIsR0FBRyxDQUFDLENBQUM7SUFDakQsQ0FBQztDQUNKO0FBMUJELDRCQTBCQyJ9","assetPath":"Assets/Chapter2/Scripts/JumpUp.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"jumpPower","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"JumpPower","description":""},"isCompiled":true}'
+  typescriptHash: a53f5ce40e1c8292f4ae9b5b11ac92f5
