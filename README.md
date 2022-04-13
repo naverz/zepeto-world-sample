@@ -9,8 +9,11 @@
 
 [챕터 소개] 
 - Chapter 1 : 게임오브젝트 이동과 텔레포트로 완성하는 점프맵
+- - Teleport, GameObject Movement, GameObject Rotator
 - Chapter 2 : 캐릭터 이동 속도와 점프 제어를 이용한 아이템 먹기 게임
+- - Item Get, UI Controller, Jump Power, Run Speed Up
 - Chapter 3 : 상호작용을 이용한 간단한 랜덤 게임
+- - Interaction Button, Gesture
 
 [폴더 소개]
 - Scenes : 폴더 내의 Chapter1 Scene 파일을 더블클랙해서 Play 할 수 있습니다.
