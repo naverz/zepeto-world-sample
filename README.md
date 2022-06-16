@@ -1,23 +1,23 @@
 # zepeto-world-sample
 
-안녕하세요, 제페토 에반젤리스트입니다.
+Hello! I am a Zepeto Evangelist.
 
-제페토 월드 개발에 도움을 드리고자 샘플 예제를 난이도 별로 제작하게 되었습니다
+I've prepared a sample project separated by difficulty level to help creators start developing in Zepeto
 
-예제는 추가로 업데이트 될 예정이며, 
-각 예제에 대한 상세한 강의 영상도 준비 중이오니 조금만 기다려 주세요 :)
+The project will continue to be updated going forward, and there are detailed tutorial videos planned for you as well! :)
 
-[챕터 소개] 
-- Chapter 1 : 게임오브젝트 이동과 텔레포트로 완성하는 점프맵
-- - Teleport, GameObject Movement, GameObject Rotator
-- Chapter 2 : 캐릭터 이동 속도와 점프 제어를 이용한 아이템 먹기 게임
-- - Item Get, UI Controller, Jump Power, Run Speed Up
-- Chapter 3 : 상호작용을 이용한 간단한 랜덤 게임
-- - Interaction Button, Gesture
+Chapter Introduction
+[Chapter Introduction] 
+- Chapter 1 - Object movement and manipulation obstacle course
+  - Teleport, GameObject Movement, GameObject Rotation
+- Chapter2 : Item collection game example world using the character controller jump and movement controls 
+  - Item Collection, UI Controller, Jump Power, Run Speed Up
+- Chapter 3 : Simple interaction randomizer example world
+  - Interaction Button, Gesture
 
-[폴더 소개]
-- Scenes : 폴더 내의 Chapter1 Scene 파일을 더블클랙해서 Play 할 수 있습니다.
-- Scripts : 폴더 내의 스크립트를 이용해서 원하는 기능을 손쉽게 구현할 수 있습니다.
-- Materials : 각 챕터에 사용된 메테리얼 파일입니다.
-- Prefabs : 각 챕터에 사용된 프리팹 파일입니다.
-- Resources : 제페토에서 공식적으로 제공하는 맵, BGM, Skybox 등 각종 리소스 파일입니다. 월드 제작시 자유롭게 사용이 가능합니다. 
+[Folder Contents]
+- Scenes : Double click and open the Chapter1.Scene file to enter the scene.
+- Scripts : Contains various scripts for you to run and try out.
+- Materials : The material files used in each chapter.
+- Prefabs : The prefabs used in each chapter. 
+- Resources : Contains various Zepeto provided resources such as the map, BGM, skybos, etc. Feel free to use this as needed in your worlds!
