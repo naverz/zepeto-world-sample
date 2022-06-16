@@ -6,7 +6,6 @@ I've prepared a sample project separated by difficulty level to help creators st
 
 The project will continue to be updated going forward, and there are detailed tutorial videos planned for you as well! :)
 
-Chapter Introduction
 [Chapter Introduction] 
 - Chapter 1 - Object movement and manipulation obstacle course
   - Teleport, GameObject Movement, GameObject Rotation
